@@ -52,15 +52,11 @@ a_n + S_n = a_n S_n \quad (n \in \mathbb{N}^*)
       &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;根据计算,&lt;strong&gt;①正确&lt;/strong&gt;.
-到第三项,数列已经开始&lt;del&gt;崩坏&lt;/del&gt;不好算了.
-可以预见的是,通项应该是没戏的.
-不过大概可以看出,\(a_{3}\lt \cfrac{-\sqrt{2}+\sqrt{18}}{2}=\sqrt{2}=a_{2}\lt a_{1} \),数列\(\{a_{n}\}\)是递减数列.
-这也比较符合直觉,\(a_{n}=\cfrac{S_{n}}{S_{n}-1}=1+\cfrac{1}{S_{n}-1}\),而\(a_{n}\gt 0,S_{n}\)单调递增,那么\(a_{n}\)必然单调递减,并且始终大于1.
-这样，便可以确定&lt;strong&gt;③正确&lt;/strong&gt;.
-由以上推理,有\(a_{n}\gt 1\),那么\(S_{n}\)显然没有上界，&lt;strong&gt;②错误&lt;/strong&gt;.
-④等价于
-&lt;/p&gt;</description>
+&lt;p&gt;根据计算,&lt;strong&gt;①正确&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;到第三项,数列已经开始&lt;del&gt;崩坏&lt;/del&gt;不好算了.&lt;/p&gt;
+&lt;p&gt;可以预见的是,通项应该是没戏的.&lt;/p&gt;
+&lt;p&gt;不过大概可以看出,\(a_{3}\lt \cfrac{-\sqrt{2}+\sqrt{18}}{2}=\sqrt{2}=a_{2}\lt a_{1} \),数列\(\{a_{n}\}\)是递减数列.&lt;/p&gt;
+&lt;p&gt;这也比较符合直觉,\(a_{n}=\cfrac{S_{n}}{S_{n}-1}=1+\cfrac{1}{S_{n}-1}\),而\(a_{n}\gt 0,S_{n}\)单调递增,那么\(a_{n}\)必然单调递减,并且始终大于1.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
