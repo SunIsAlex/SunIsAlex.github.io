@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto" data-theme="auto">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
+	<meta name="generator" content="Hugo 0.154.3"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <link rel="icon" href="/favicon.ico" sizes="any">
     <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
     <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
@@ -57,11 +58,11 @@ if (!header) {
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="noindex, nofollow">
-<title>数学 | Alex&#39;s site</title>
-<meta name="keywords" content="">
+<title>Alex&#39;s site</title>
+
 <meta name="description" content="">
 <meta name="author" content="">
-<link rel="canonical" href="//192.168.0.103:1313/tags/%E6%95%B0%E5%AD%A6/">
+<link rel="canonical" href="//192.168.0.103:1313/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.1917785420c0d356d2d1d6b533a8bdf08513d8ffcfa1c7c0261165259c79f8d8.css" integrity="sha256-GRd4VCDA01bS0da1M6i98IUT2P/PocfAJhFlJZx5&#43;Ng=" rel="preload stylesheet" as="style">
 <link rel="icon" href="//192.168.0.103:1313/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="//192.168.0.103:1313/favicon-16x16.png">
@@ -70,8 +71,9 @@ if (!header) {
 <link rel="mask-icon" href="//192.168.0.103:1313/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="//192.168.0.103:1313/tags/%E6%95%B0%E5%AD%A6/index.xml" title="rss">
-<link rel="alternate" hreflang="en" href="//192.168.0.103:1313/tags/%E6%95%B0%E5%AD%A6/">
+<link rel="alternate" type="application/rss+xml" href="//192.168.0.103:1313/index.xml" title="rss">
+<link rel="alternate" type="application/json" href="//192.168.0.103:1313/index.json" title="json">
+<link rel="alternate" hreflang="en" href="//192.168.0.103:1313/">
 <noscript>
     <style>
         #theme-toggle,
@@ -156,7 +158,7 @@ if (!header) {
         <ul id="menu">
             <li>
                 <a href="//192.168.0.103:1313/" title="Home Page">
-                    <span>Home Page</span>
+                    <span class="active">Home Page</span>
                 </a>
             </li>
             <li>
@@ -178,49 +180,35 @@ if (!header) {
     </nav>
 </header>
 <main class="main"> 
-<header class="page-header">
-  <h1>
-    数学
-  </h1>
-</header>
 
-<article class="post-entry tag-entry"> 
+<article class="post-entry"> 
+<figure class="entry-cover">
+        <img loading="lazy" src="https://gohugo.io/images/hugo-logo-wide.svg" alt="">
+</figure>
   <header class="entry-header">
-    <h2 class="entry-hint-parent">每日艺题 DAY001
+    <h2 class="entry-hint-parent">Hugo
     </h2>
   </header>
   <div class="entry-content">
-    <p>DAY001:\(S_{n},a_{n}\)联袂数列(无通项) 题目：
-已知 \(\{a_n\}\) 是各项均为正数的无穷数列,其前 \(n\) 项和为 \(S_n\),且
-\[ a_n &#43; S_n = a_n S_n \quad (n \in \mathbb{N}^*) \]
-给出下列四个结论： ① \(a_2 = \sqrt{2}\)；
-② 存在一个正数 \(m_0\),使得对任意的 \(n \in \mathbb{N}^*\),都有 \(S_n &lt; m_0\)；
-③ 数列 \(\{a_n\}\) 单调递减；
-④ 对任意的 \(n \in \mathbb{N}^*\),\(n \geq 2\),都有 \(a_{n-1} &#43; a_{n&#43;1} &gt; 2a_n\)。
-其中所有正确结论的序号是___。 (SRC:北京101中2025-2026第一学期高三数学统练二)
-先算几项,寻找规律：
-n \(a_{n}\) 1 2 2 \(\sqrt{2}\) 3 \(\cfrac{-\sqrt{2}&#43;\sqrt{10&#43;4\sqrt{2}}}{2} \) 根据计算,①正确.
-到第三项,数列已经开始崩坏不好算了.
-可以预见的是,通项应该是没戏的.
-不过大概可以看出,\(a_{3}\lt \cfrac{-\sqrt{2}&#43;\sqrt{18}}{2}=\sqrt{2}=a_{2}\lt a_{1} \),数列\(\{a_{n}\}\)是递减数列.
-这也比较符合直觉,\(a_{n}=\cfrac{S_{n}}{S_{n}-1}=1&#43;\cfrac{1}{S_{n}-1}\),而\(a_{n}\gt 0,S_{n}\)单调递增,那么\(a_{n}\)必然单调递减,并且始终大于1.
-...</p>
+    <p>Hugo是由Go编写的快速现代静态网站生成器，旨在让网站创建变得有趣。 Hugo是一个通用的网站框架。从技术角度来说，Hugo是一个静态网站生成器。与每个访问者请求动态构建页面的系统不同，Hugo在创建或更新内容时构建页面。由于网站被查看的频率远远多于编辑的频率，Hugo旨在为您的网站最终用户提供最佳的查看体验，并为网站作者提供理想的编写体验。
+使用Hugo构建的网站非常快速和安全。Hugo网站可以托管在任何地方，包括Netlify，Heroku，GoDaddy，DreamHost，GitHub Pages，GitLab Pages，Surge，Firebase，Google Cloud Storage，Amazon S3，Rackspace，Azure和CloudFront，并且与CDN配合良好。Hugo网站运行无需数据库或Ruby、Python或PHP等昂贵运行时的依赖。
+我们认为Hugo是理想的网站创建工具，几乎可以立即构建，可以在更改时重新构建。
+Hugo有什么作用？ 从技术角度来说，Hugo使用一个源文件和模板目录作为输入，用于创建一个完整的网站。
+谁应该使用Hugo？ Hugo适用于更喜欢在文本编辑器而不是浏览器中编写的人。
+Hugo适用于那些想要手动编码自己的网站而又不想担心设置复杂的运行时、依赖和数据库的人。
+Hugo适用于构建博客、公司网站、作品集网站、文档、单个落地页或拥有数千个页面的网站的人。
+</p>
   </div>
-  <footer class="entry-footer"><span title='2026-02-10 17:31:25 +0800 CST' style='color:#01B5F4'>February 10, 2026</span></footer>
-  <a class="entry-link" aria-label="post link to 每日艺题 DAY001" href="//192.168.0.103:1313/posts/%E6%AF%8F%E6%97%A5%E8%89%BA%E9%A2%98-day001/"></a>
+  <footer class="entry-footer"><span title='2026-01-10 00:00:00 +0000 UTC' style='color:#01B5F4'>January 10, 2026</span></footer>
+  <a class="entry-link" aria-label="post link to Hugo" href="//192.168.0.103:1313/posts/hugo/"></a>
 </article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">基础数学
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>基本数学运算示例 1. 四则运算 加法 1 2 a &#43; b = 和 示例：5 &#43; 3 = 8 减法 1 2 a - b = 差 示例：10 - 4 = 6 乘法 1 2 a × b = 积 示例：7 × 6 = 42 除法 1 2 a ÷ b = 商 示例：15 ÷ 3 = 5 ...</p>
-  </div>
-  <footer class="entry-footer"><span title='2026-02-02 15:01:08 +0800 CST' style='color:#01B5F4'>February 2, 2026</span></footer>
-  <a class="entry-link" aria-label="post link to 基础数学" href="//192.168.0.103:1313/posts/basicmath/"></a>
-</article>
+<footer class="page-footer">
+  <nav class="pagination">
+    <a class="prev" href="//192.168.0.103:1313/">
+      «&nbsp;Prev&nbsp;
+    </a>
+  </nav>
+</footer>
     </main>
     
 <footer class="footer">
