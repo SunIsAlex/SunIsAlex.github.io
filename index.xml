@@ -17,26 +17,30 @@
 &lt;p&gt;(通过JS请求[/api/neofetch]得到，每2秒更新)&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code id=&#39;stat&#39; class=&#34;language&#34;&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;script&gt;
-    let api_xhr = new XMLHttpRequest();
-    neofetch = function(){
-        if (api_xhr.readyState === XMLHttpRequest.DONE) {
-            if (api_xhr.status === 0) {
-                console.log(&#39;请求被取消&#39;)
-            } else if (api_xhr.status === 200) {
-                var stat = document.getElementById(&#39;stat&#39;);
-                stat.innerText = api_xhr.response;
-            } else {
-                console.error(&#39;请求失败:&#39;, api_xhr.status);
+    var stat = document.getElementById(&#39;stat&#39;);
+    if(window.location.hostname==&#39;github.alexsun.one&#39;){
+        stat.innerHTML = &#39;Github Pages&lt;br&gt;Repository:https://github.com/SunIsAlex/SunIsAlex.github.io&#39;;
+    }else{
+        let api_xhr = new XMLHttpRequest();
+        neofetch = function(){
+            if (api_xhr.readyState === XMLHttpRequest.DONE) {
+                if (api_xhr.status === 0) {
+                    console.log(&#39;请求被取消&#39;)
+                } else if (api_xhr.status === 200) {
+                    stat.innerText = api_xhr.response;
+                } else {
+                    console.error(&#39;请求失败:&#39;, api_xhr.status);
+                }
             }
         }
+        send_xhr = function(){
+            api_xhr.open(&#39;GET&#39;,&#39;/api/neofetch&#39;);
+            api_xhr.send();
+        }
+        api_xhr.onreadystatechange = neofetch;
+        send_xhr();
+        setInterval(send_xhr,2000);
     }
-    send_xhr = function(){
-        api_xhr.open(&#39;GET&#39;,&#39;/api/neofetch&#39;);
-        api_xhr.send();
-    }
-    api_xhr.onreadystatechange = neofetch;
-    send_xhr();
-    setInterval(send_xhr,2000);
 &lt;/script&gt;
 &lt;h1 id=&#34;规划准备&#34;&gt;规划准备&lt;/h1&gt;
 &lt;p&gt;此站于&lt;a href=&#34;https://qhfz.edu.cn/&#34;&gt;清华附中&lt;/a&gt;“极智”挑战期间(2026-01-31~2026-02-06)搭建&lt;/p&gt;
@@ -55,11 +59,7 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ssh -p &lt;span class=&#34;m&#34;&gt;22&lt;/span&gt; root@&amp;lt;your_ip&amp;gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;随后输入密码即可登录&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;设置域名解析&lt;/p&gt;
-&lt;p&gt;注册&lt;a href=&#34;https://www.namesilo.com/&#34;&gt;Namesilo&lt;/a&gt;的账号，并在Namesilo中购买一个域名（笔者购买了alexsun.one，花费24CNY），配置DNS记录，等待10分钟（TTL=3600）后即可全球生效&lt;/p&gt;</description>
+&lt;/div&gt;&lt;p&gt;随后输入密码即可登录&lt;/p&gt;</description>
     </item>
     <item>
       <title>每日艺题 DAY002</title>

@@ -80,11 +80,7 @@ if (!header) {
 ssh -p 22 root@&lt;your_ip&gt;
 
 
-随后输入密码即可登录
-
-
-设置域名解析
-注册Namesilo的账号，并在Namesilo中购买一个域名（笔者购买了alexsun.one，花费24CNY），配置DNS记录，等待10分钟（TTL=3600）后即可全球生效">
+随后输入密码即可登录">
 <meta name="author" content="">
 <link rel="canonical" href="https://github.alexsun.one/posts/aboutthissite/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.1917785420c0d356d2d1d6b533a8bdf08513d8ffcfa1c7c0261165259c79f8d8.css" integrity="sha256-GRd4VCDA01bS0da1M6i98IUT2P/PocfAJhFlJZx5&#43;Ng=" rel="preload stylesheet" as="style">
@@ -156,9 +152,7 @@ ssh -p 22 root@&lt;your_ip&gt;
 具体操作 配置云服务器
 清华附中为学员提供了阿里云ECS的服务器，这与笔者在初中时搭建的服务器类型相同。
 在Datacon注册及登录后，可以打开虚拟环境，查看ECS SSH的ip及密码，然后便可以通过SSH远程登录root账号（笔者使用了VSCode的OpenSSH插件）
-1 ssh -p 22 root@&lt;your_ip&gt; 随后输入密码即可登录
-设置域名解析
-注册Namesilo的账号，并在Namesilo中购买一个域名（笔者购买了alexsun.one，花费24CNY），配置DNS记录，等待10分钟（TTL=3600）后即可全球生效">
+1 ssh -p 22 root@&lt;your_ip&gt; 随后输入密码即可登录">
   <meta property="og:locale" content="en-us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -190,11 +184,7 @@ ssh -p 22 root@&lt;your_ip&gt;
 ssh -p 22 root@&lt;your_ip&gt;
 
 
-随后输入密码即可登录
-
-
-设置域名解析
-注册Namesilo的账号，并在Namesilo中购买一个域名（笔者购买了alexsun.one，花费24CNY），配置DNS记录，等待10分钟（TTL=3600）后即可全球生效">
+随后输入密码即可登录">
 
 
 <script type="application/ld+json">
@@ -223,7 +213,7 @@ ssh -p 22 root@&lt;your_ip&gt;
   "@type": "BlogPosting",
   "headline": "关于本站",
   "name": "关于本站",
-  "description": "网站概况： (通过JS请求[/api/neofetch]得到，每2秒更新)\n规划准备 此站于清华附中“极智”挑战期间(2026-01-31~2026-02-06)搭建\n笔者打算使用hugo搭建静态博客网站，然后由nginx处理流量。\n具体操作 配置云服务器\n清华附中为学员提供了阿里云ECS的服务器，这与笔者在初中时搭建的服务器类型相同。\n在Datacon注册及登录后，可以打开虚拟环境，查看ECS SSH的ip及密码，然后便可以通过SSH远程登录root账号（笔者使用了VSCode的OpenSSH插件）\n1 ssh -p 22 root@\u0026lt;your_ip\u0026gt; 随后输入密码即可登录\n设置域名解析\n注册Namesilo的账号，并在Namesilo中购买一个域名（笔者购买了alexsun.one，花费24CNY），配置DNS记录，等待10分钟（TTL=3600）后即可全球生效\n",
+  "description": "网站概况： (通过JS请求[/api/neofetch]得到，每2秒更新)\n规划准备 此站于清华附中“极智”挑战期间(2026-01-31~2026-02-06)搭建\n笔者打算使用hugo搭建静态博客网站，然后由nginx处理流量。\n具体操作 配置云服务器\n清华附中为学员提供了阿里云ECS的服务器，这与笔者在初中时搭建的服务器类型相同。\n在Datacon注册及登录后，可以打开虚拟环境，查看ECS SSH的ip及密码，然后便可以通过SSH远程登录root账号（笔者使用了VSCode的OpenSSH插件）\n1 ssh -p 22 root@\u0026lt;your_ip\u0026gt; 随后输入密码即可登录\n",
   "keywords": [
     "Nginx", "Hugo", "Linux"
   ],
@@ -361,26 +351,30 @@ ssh -p 22 root@&lt;your_ip&gt;
 <p>(通过JS请求[/api/neofetch]得到，每2秒更新)</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code id='stat' class="language"></code></pre></div>
 <script>
-    let api_xhr = new XMLHttpRequest();
-    neofetch = function(){
-        if (api_xhr.readyState === XMLHttpRequest.DONE) {
-            if (api_xhr.status === 0) {
-                console.log('请求被取消')
-            } else if (api_xhr.status === 200) {
-                var stat = document.getElementById('stat');
-                stat.innerText = api_xhr.response;
-            } else {
-                console.error('请求失败:', api_xhr.status);
+    var stat = document.getElementById('stat');
+    if(window.location.hostname=='github.alexsun.one'){
+        stat.innerHTML = 'Github Pages<br>Repository:https://github.com/SunIsAlex/SunIsAlex.github.io';
+    }else{
+        let api_xhr = new XMLHttpRequest();
+        neofetch = function(){
+            if (api_xhr.readyState === XMLHttpRequest.DONE) {
+                if (api_xhr.status === 0) {
+                    console.log('请求被取消')
+                } else if (api_xhr.status === 200) {
+                    stat.innerText = api_xhr.response;
+                } else {
+                    console.error('请求失败:', api_xhr.status);
+                }
             }
         }
+        send_xhr = function(){
+            api_xhr.open('GET','/api/neofetch');
+            api_xhr.send();
+        }
+        api_xhr.onreadystatechange = neofetch;
+        send_xhr();
+        setInterval(send_xhr,2000);
     }
-    send_xhr = function(){
-        api_xhr.open('GET','/api/neofetch');
-        api_xhr.send();
-    }
-    api_xhr.onreadystatechange = neofetch;
-    send_xhr();
-    setInterval(send_xhr,2000);
 </script>
 <h1 id="规划准备">规划准备<a hidden class="anchor" aria-hidden="true" href="#规划准备">#</a></h1>
 <p>此站于<a href="https://qhfz.edu.cn/">清华附中</a>“极智”挑战期间(2026-01-31~2026-02-06)搭建</p>
