@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Alex's site</title><link>https://edge.alexsun.one/</link><description>Recent content on Alex's site</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Fri, 27 Feb 2026 17:08:31 +0800</lastBuildDate><atom:link href="https://edge.alexsun.one/index.xml" rel="self" type="application/rss+xml"/><item><title>关于本站</title><link>https://edge.alexsun.one/posts/about-this-site/</link><pubDate>Mon, 02 Feb 2026 16:36:28 +0800</pubDate><guid>https://edge.alexsun.one/posts/about-this-site/</guid><description>&lt;!--
+### 网站概况：
+
+(通过JS请求[/api/neofetch]得到，每2秒更新)
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code id='stat' class="language"&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;script&gt;
+ var stat = document.getElementById('stat');
+ var count = 0;
+ if(window.location.hostname=='github.alexsun.one'){
+ stat.innerHTML = 'Github Pages&lt;br&gt;Repository:https://github.com/SunIsAlex/SunIsAlex.github.io';
+ }else{
+ let api_xhr = new XMLHttpRequest();
+ neofetch = function(){
+ if (api_xhr.readyState === XMLHttpRequest.DONE) {
+ if (api_xhr.status === 0) {
+ console.log('请求被取消')
+ } else if (api_xhr.status === 200) {
+ stat.innerText = api_xhr.response;
+ } else {
+ if (count === 3){
+ clearInterval(interval_id);
+ stat.innerText = '请求失败';
+ }
+ console.error('请求失败:', api_xhr.status);
+ count += 1;
+ }
+ }
+ }
+ send_xhr = function(){
+ api_xhr.open('GET','/api/neofetch');
+ api_xhr.send();
+ }
+ api_xhr.onreadystatechange = neofetch;
+ send_xhr();
+ const interval_id = setInterval(send_xhr,2000);
+ }
+&lt;/script&gt;
+--&gt;
+&lt;h1 id="规划准备"&gt;规划准备&lt;/h1&gt;
+&lt;p&gt;此站于&lt;a href="https://qhfz.edu.cn/"&gt;清华附中&lt;/a&gt;“极智”挑战期间(2026-01-31~2026-02-06)搭建&lt;/p&gt;</description></item><item><title>有机化学补全计划1:DA反应</title><link>https://edge.alexsun.one/posts/chemistry/organic-chemistry-001-diels-alder/</link><pubDate>Fri, 27 Feb 2026 17:08:31 +0800</pubDate><guid>https://edge.alexsun.one/posts/chemistry/organic-chemistry-001-diels-alder/</guid><description>狄尔斯–阿尔德反应，又叫双烯加成反应，是一种有机反应，共轭双烯与取代烯烃反应生成取代环己烯。</description></item><item><title>浅谈泰勒展开与高考数学</title><link>https://edge.alexsun.one/posts/math/taylor-expansion/</link><pubDate>Mon, 23 Feb 2026 17:10:57 +0800</pubDate><guid>https://edge.alexsun.one/posts/math/taylor-expansion/</guid><description>&lt;h1 id="泰勒公式"&gt;泰勒公式&lt;/h1&gt;
+&lt;h2 id="高数知识"&gt;高数知识&lt;/h2&gt;
+&lt;p&gt;泰勒 (Taylor) 公式的主要作用是用多项式逼近函数和近似计算，对应的分别是带有皮亚诺余项的泰勒公式和带有拉格朗日余项的泰勒公式。&lt;/p&gt;</description></item><item><title>2025 2026西城高三期末作文</title><link>https://edge.alexsun.one/posts/2025-2026-xicheng-gaosan-qimo-zuowen/</link><pubDate>Fri, 20 Feb 2026 22:55:31 +0800</pubDate><guid>https://edge.alexsun.one/posts/2025-2026-xicheng-gaosan-qimo-zuowen/</guid><description>&lt;p&gt;&lt;strong&gt;第二节（20分）&lt;/strong&gt;&lt;/p&gt;</description></item><item><title>蓝屏0xc000000e修复</title><link>https://edge.alexsun.one/posts/computer/fix-uefi-boot/</link><pubDate>Fri, 20 Feb 2026 00:00:00 +0000</pubDate><guid>https://edge.alexsun.one/posts/computer/fix-uefi-boot/</guid><description>&lt;div class="notice warning" &gt;
+ &lt;p class="notice-title"&gt;
+ &lt;span class="icon-notice baseline"&gt;
+ &lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="126 76.5 300 300"&gt;
+ &lt;path d="M297.431 324.397v-34.255c0-3.245-2.344-5.95-5.358-5.95h-32.146c-3.014 0-5.358 2.705-5.358 5.95v34.255c0 3.245 2.344 5.95 5.358 5.95h32.146c3.014 0 5.358-2.705 5.358-5.95Zm-.335-67.428 3.014-82.753c0-1.081-.502-2.524-1.674-3.425-1.005-.902-2.512-1.983-4.019-1.983h-36.834c-1.507 0-3.014 1.081-4.019 1.983-1.172.901-1.674 2.704-1.674 3.786l2.846 82.392c0 2.344 2.512 4.146 5.693 4.146h30.975c3.013 0 5.525-1.803 5.692-4.146Zm-2.344-168.39L423.34 342.425c3.683 7.032 3.516 15.686-.335 22.717-3.85 7.031-10.883 11.358-18.417 11.358H147.413c-7.534 0-14.566-4.327-18.417-11.358-3.85-7.031-4.018-15.685-.335-22.716L257.248 88.578C260.93 81.188 268.13 76.5 276 76.5c7.87 0 15.069 4.688 18.752 12.08Z"/&gt;
+&lt;/svg&gt;
+
+ &lt;/span&gt; Warning &lt;/p&gt;</description></item><item><title>每日艺题 DAY006</title><link>https://edge.alexsun.one/posts/meiri-yiti-day006/</link><pubDate>Wed, 18 Feb 2026 03:39:25 +0000</pubDate><guid>https://edge.alexsun.one/posts/meiri-yiti-day006/</guid><description>&lt;p&gt;&lt;img alt="题目图片" loading="lazy" src="https://img.alexsun.one/file/AgACAgEAAxkDAAMJaZU0k-ji49KrdkCC8LapAtkOd_gAAgoMaxuyQalEKjKfi4mU-1kBAAMCAAN5AAM6BA.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;Note:&lt;/p&gt;</description></item><item><title>每日艺题 DAY005</title><link>https://edge.alexsun.one/posts/physics/meiri-yiti-day005/</link><pubDate>Wed, 18 Feb 2026 02:39:06 +0000</pubDate><guid>https://edge.alexsun.one/posts/physics/meiri-yiti-day005/</guid><description>&lt;p&gt;&lt;img alt="题目图片" loading="lazy" src="https://img.alexsun.one/file/AgACAgEAAxkDAAMIaZUmLIuPs5iSUQwjkwR1vwTlN_IAAgkMaxuyQalEIYi737SLl7YBAAMCAAN4AAM6BA.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;A.注意卷起来时无法避免正负极板不接触（不能正/负极板与正/负极板自己相接）&lt;/p&gt;</description></item><item><title>每日艺题 DAY004</title><link>https://edge.alexsun.one/posts/chemistry/meiri-yiti-day004/</link><pubDate>Tue, 17 Feb 2026 15:00:28 +0000</pubDate><guid>https://edge.alexsun.one/posts/chemistry/meiri-yiti-day004/</guid><description>&lt;h1 id="下列对客观事实的解释错误的是"&gt;下列对客观事实的解释错误的是（）&lt;/h1&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th style="text-align: left"&gt;选项&lt;/th&gt;
+ &lt;th style="text-align: left"&gt;客观事实&lt;/th&gt;
+ &lt;th style="text-align: left"&gt;解释&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;A&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;热稳定性：\( NH_4Cl &gt; NH_4F \)&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;\( F \)的电负性强于 \( Cl \)，\( HF \)的稳定性强于 \( HCl \)，\( F^- \)更易夺取 \( NH_4^+ \)中的 \( H^+ \)生成 \( HF \)，故 \( NH_4F \)的热稳定性比 \( NH_4Cl \)差。&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;B&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;还原性：\( KH &gt; NaH \)&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;\( K^+ \)的半径大于 \( Na^+ \)，\( KH \)中的离子键较弱，发生化学反应时，\( KH \)中的离子键更易断裂生成 \( H^+ \)，故 \( KH \)的还原性强于 \( NaH \)。&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;C&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;熔点：\( AlCl_3 &gt; AlBr_3 \)&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;\( AlCl_3 \)是&lt;del&gt;离子晶体&lt;/del&gt;，\( AlBr_3 \)是分子晶体，离子键比分子间作用力强，破坏离子键吸收的能量多，故 \( AlCl_3 \)的熔点高于 \( AlBr_3 \)。&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;D&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;苯和乙酸（l）混合后体积增大&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;混合后苯和乙酸分子间平均作用力小于混合前分子间平均作用力，苯和乙酸分子间平均距离比混合前大，故混合后体积增大。&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;A. A&lt;br&gt;
+B. B&lt;br&gt;
+&lt;strong&gt;C. C&lt;/strong&gt;&lt;br&gt;
+D. D&lt;/p&gt;</description></item><item><title>每日艺题 DAY003</title><link>https://edge.alexsun.one/posts/chemistry/meiri-yiti-day003/</link><pubDate>Fri, 13 Feb 2026 17:11:34 +0800</pubDate><guid>https://edge.alexsun.one/posts/chemistry/meiri-yiti-day003/</guid><description>&lt;h1 id="一些零碎的化学知识点"&gt;一些零碎的化学知识点&lt;/h1&gt;
+&lt;p&gt;1.还原性:\(Fe^{2+}\)&amp;lt;\(I^{-}\)&lt;/p&gt;</description></item><item><title>每日艺题 DAY002</title><link>https://edge.alexsun.one/posts/math/meiri-yiti-day002/</link><pubDate>Thu, 12 Feb 2026 16:54:26 +0800</pubDate><guid>https://edge.alexsun.one/posts/math/meiri-yiti-day002/</guid><description>&lt;h1 id="联袂数列有通项"&gt;\(a_n\)\(S_n\)联袂数列(有通项)&lt;/h1&gt;
+$$
+\begin{gather}
+a_nS_n=\cfrac{1}{4^n},a_1&gt;0,求a_n.
+\end{gather}
+$$&lt;h2 id="attempt1"&gt;Attempt1:&lt;/h2&gt;
+$$
+\begin{gather}
+消去S_n:S_n=\cfrac{1}{a_n4^n}\\
+S_{n+1}=\cfrac{1}{a_{n+1}4^{n+1}}\\
+a_{n+1}=\cfrac{1}{4^{n+1}}({\cfrac{1}{a_{n+1}}-\cfrac{4}{a_n}})\\
+=\cfrac{1}{4^{n+1}}({\cfrac{a_{n}-4a_{n+1}}{a_na_{n+1}}})
+\end{gather}
+$$&lt;p&gt;这样的形式还是太复杂了,遂放弃.&lt;/p&gt;</description></item><item><title>每日艺题 DAY001</title><link>https://edge.alexsun.one/posts/math/meiri-yiti-day001/</link><pubDate>Tue, 10 Feb 2026 17:31:25 +0800</pubDate><guid>https://edge.alexsun.one/posts/math/meiri-yiti-day001/</guid><description>&lt;h1 id="联袂数列无通项"&gt;\(S_{n},a_{n}\)联袂数列(无通项)&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;题目：&lt;/strong&gt;&lt;/p&gt;</description></item><item><title>HTTP状态码</title><link>https://edge.alexsun.one/posts/computer/http-response-status-code/</link><pubDate>Fri, 06 Feb 2026 10:51:13 +0800</pubDate><guid>https://edge.alexsun.one/posts/computer/http-response-status-code/</guid><description>&lt;p&gt;以下是用简体中文整理的 &lt;strong&gt;HTTP 状态码&lt;/strong&gt; 介绍表格，按类别（1xx ~ 5xx）分类，包含最常用和比较重要的状态码，以及简洁说明。&lt;/p&gt;</description></item><item><title>Nginx安全配置</title><link>https://edge.alexsun.one/posts/computer/nginx-conf/</link><pubDate>Thu, 05 Feb 2026 10:47:08 +0800</pubDate><guid>https://edge.alexsun.one/posts/computer/nginx-conf/</guid><description>&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-shell" data-lang="shell"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;root@datacon-winterc:~/quickstart# cat /etc/nginx/nginx.conf &lt;span class="p"&gt;|&lt;/span&gt; grep access_log
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;access_log /var/log/nginx/access.log&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="c1"&gt;#nginx访问日志文件&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-shell" data-lang="shell"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;grep wp-admin /var/log/nginx/access.log &lt;span class="p"&gt;|&lt;/span&gt; cat -n
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;#查看日志中含wp-admin(wordpress后台)的内容&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;1 162.158.182.84 - - [05/Feb/2026:00:05:25 +0800] &amp;#34;GET /wordpress/wp-admin/setup-config.php HTTP/1.1&amp;#34; 404 134 &amp;#34;-&amp;#34; &amp;#34;https://alexsun.one/wordpress/wp-admin/setup-config.php&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;......
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;73 172.71.184.188 - - [05/Feb/2026:10:49:11 +0800] &amp;#34;GET /wp-admin/setup-config.php HTTP/1.1&amp;#34; 444 0 &amp;#34;-&amp;#34; &amp;#34;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;我的站点上并没有安装WordPress，以上73条访问日志来自于&lt;em&gt;&lt;strong&gt;恶意扫描&lt;/strong&gt;&lt;/em&gt;&lt;sup id="fnref:1"&gt;&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref"&gt;1&lt;/a&gt;&lt;/sup&gt;
+&lt;img alt="IP信息" loading="lazy" src="https://free.picui.cn/free/2026/02/05/69840e9e9cc7c.png"&gt;&lt;/p&gt;</description></item><item><title>Available_prompts</title><link>https://edge.alexsun.one/posts/available-prompts/</link><pubDate>Wed, 04 Feb 2026 22:59:20 +0800</pubDate><guid>https://edge.alexsun.one/posts/available-prompts/</guid><description>&lt;p&gt;以下是一些AI越狱的提示词(由Grok生成)&lt;/p&gt;</description></item><item><title>20260202语法填空</title><link>https://edge.alexsun.one/posts/yufa-tiankong-01/</link><pubDate>Mon, 02 Feb 2026 22:17:46 +0800</pubDate><guid>https://edge.alexsun.one/posts/yufa-tiankong-01/</guid><description>&lt;p&gt;1.with&lt;/p&gt;
+&lt;p&gt;2.invite&lt;/p&gt;</description></item><item><title>Markdown</title><link>https://edge.alexsun.one/posts/markdown/</link><pubDate>Mon, 02 Feb 2026 15:49:00 +0800</pubDate><guid>https://edge.alexsun.one/posts/markdown/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;&lt;a href="https://www.markdown.cn/docs/intro/"&gt;Markdown&lt;/a&gt;是一种轻量级标记语言，旨在让用户以易读易写的纯文本格式编写文档，并能够轻松转换为HTML等格式。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id="一一级标题"&gt;一、一级标题&lt;/h1&gt;
+&lt;p&gt;用&lt;code&gt;#&lt;/code&gt; 可以表示&lt;strong&gt;一级标题&lt;/strong&gt;&lt;/p&gt;</description></item><item><title>Hugo</title><link>https://edge.alexsun.one/posts/hugo/</link><pubDate>Sat, 10 Jan 2026 00:00:00 +0000</pubDate><guid>https://edge.alexsun.one/posts/hugo/</guid><description>&lt;p&gt;&lt;em&gt;Hugo&lt;/em&gt;是由Go编写的快速现代静态网站生成器，旨在让网站创建变得有趣。
+&lt;em&gt;Hugo&lt;/em&gt;是一个通用的网站框架。从技术角度来说，&lt;em&gt;Hugo&lt;/em&gt;是一个静态网站生成器。与每个访问者请求动态构建页面的系统不同，&lt;em&gt;Hugo&lt;/em&gt;在创建或更新内容时构建页面。由于网站被查看的频率远远多于编辑的频率，&lt;em&gt;Hugo&lt;/em&gt;旨在为您的网站最终用户提供最佳的查看体验，并为网站作者提供理想的编写体验。&lt;/p&gt;</description></item><item><title>Search</title><link>https://edge.alexsun.one/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://edge.alexsun.one/search/</guid><description>search</description></item><item><title>Memo 01</title><link>https://edge.alexsun.one/posts/memo-01/</link><pubDate>Wed, 18 Feb 2026 02:47:17 +0000</pubDate><guid>https://edge.alexsun.one/posts/memo-01/</guid><description>&lt;h2 id="机场链接备忘"&gt;机场链接备忘&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://mojie.app"&gt;魔戒&lt;/a&gt;&lt;/p&gt;</description></item><item><title>归档</title><link>https://edge.alexsun.one/archive/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://edge.alexsun.one/archive/</guid><description>archives</description></item></channel></rss>

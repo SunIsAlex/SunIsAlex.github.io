@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Math on Alex's site</title><link>https://edge.alexsun.one/posts/math/</link><description>Recent content in Math on Alex's site</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 23 Feb 2026 17:10:57 +0800</lastBuildDate><atom:link href="https://edge.alexsun.one/posts/math/index.xml" rel="self" type="application/rss+xml"/><item><title>浅谈泰勒展开与高考数学</title><link>https://edge.alexsun.one/posts/math/taylor-expansion/</link><pubDate>Mon, 23 Feb 2026 17:10:57 +0800</pubDate><guid>https://edge.alexsun.one/posts/math/taylor-expansion/</guid><description>&lt;h1 id="泰勒公式"&gt;泰勒公式&lt;/h1&gt;
+&lt;h2 id="高数知识"&gt;高数知识&lt;/h2&gt;
+&lt;p&gt;泰勒 (Taylor) 公式的主要作用是用多项式逼近函数和近似计算，对应的分别是带有皮亚诺余项的泰勒公式和带有拉格朗日余项的泰勒公式。&lt;/p&gt;</description></item><item><title>每日艺题 DAY002</title><link>https://edge.alexsun.one/posts/math/meiri-yiti-day002/</link><pubDate>Thu, 12 Feb 2026 16:54:26 +0800</pubDate><guid>https://edge.alexsun.one/posts/math/meiri-yiti-day002/</guid><description>&lt;h1 id="联袂数列有通项"&gt;\(a_n\)\(S_n\)联袂数列(有通项)&lt;/h1&gt;
+$$
+\begin{gather}
+a_nS_n=\cfrac{1}{4^n},a_1&gt;0,求a_n.
+\end{gather}
+$$&lt;h2 id="attempt1"&gt;Attempt1:&lt;/h2&gt;
+$$
+\begin{gather}
+消去S_n:S_n=\cfrac{1}{a_n4^n}\\
+S_{n+1}=\cfrac{1}{a_{n+1}4^{n+1}}\\
+a_{n+1}=\cfrac{1}{4^{n+1}}({\cfrac{1}{a_{n+1}}-\cfrac{4}{a_n}})\\
+=\cfrac{1}{4^{n+1}}({\cfrac{a_{n}-4a_{n+1}}{a_na_{n+1}}})
+\end{gather}
+$$&lt;p&gt;这样的形式还是太复杂了,遂放弃.&lt;/p&gt;</description></item><item><title>每日艺题 DAY001</title><link>https://edge.alexsun.one/posts/math/meiri-yiti-day001/</link><pubDate>Tue, 10 Feb 2026 17:31:25 +0800</pubDate><guid>https://edge.alexsun.one/posts/math/meiri-yiti-day001/</guid><description>&lt;h1 id="联袂数列无通项"&gt;\(S_{n},a_{n}\)联袂数列(无通项)&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;题目：&lt;/strong&gt;&lt;/p&gt;</description></item></channel></rss>

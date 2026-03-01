@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Hugo on Alex's site</title><link>https://edge.alexsun.one/tags/hugo/</link><description>Recent content in Hugo on Alex's site</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 02 Feb 2026 16:36:28 +0800</lastBuildDate><atom:link href="https://edge.alexsun.one/tags/hugo/index.xml" rel="self" type="application/rss+xml"/><item><title>关于本站</title><link>https://edge.alexsun.one/posts/about-this-site/</link><pubDate>Mon, 02 Feb 2026 16:36:28 +0800</pubDate><guid>https://edge.alexsun.one/posts/about-this-site/</guid><description>&lt;!--
+### 网站概况：
+
+(通过JS请求[/api/neofetch]得到，每2秒更新)
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code id='stat' class="language"&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;script&gt;
+ var stat = document.getElementById('stat');
+ var count = 0;
+ if(window.location.hostname=='github.alexsun.one'){
+ stat.innerHTML = 'Github Pages&lt;br&gt;Repository:https://github.com/SunIsAlex/SunIsAlex.github.io';
+ }else{
+ let api_xhr = new XMLHttpRequest();
+ neofetch = function(){
+ if (api_xhr.readyState === XMLHttpRequest.DONE) {
+ if (api_xhr.status === 0) {
+ console.log('请求被取消')
+ } else if (api_xhr.status === 200) {
+ stat.innerText = api_xhr.response;
+ } else {
+ if (count === 3){
+ clearInterval(interval_id);
+ stat.innerText = '请求失败';
+ }
+ console.error('请求失败:', api_xhr.status);
+ count += 1;
+ }
+ }
+ }
+ send_xhr = function(){
+ api_xhr.open('GET','/api/neofetch');
+ api_xhr.send();
+ }
+ api_xhr.onreadystatechange = neofetch;
+ send_xhr();
+ const interval_id = setInterval(send_xhr,2000);
+ }
+&lt;/script&gt;
+--&gt;
+&lt;h1 id="规划准备"&gt;规划准备&lt;/h1&gt;
+&lt;p&gt;此站于&lt;a href="https://qhfz.edu.cn/"&gt;清华附中&lt;/a&gt;“极智”挑战期间(2026-01-31~2026-02-06)搭建&lt;/p&gt;</description></item><item><title>Hugo</title><link>https://edge.alexsun.one/posts/hugo/</link><pubDate>Sat, 10 Jan 2026 00:00:00 +0000</pubDate><guid>https://edge.alexsun.one/posts/hugo/</guid><description>&lt;p&gt;&lt;em&gt;Hugo&lt;/em&gt;是由Go编写的快速现代静态网站生成器，旨在让网站创建变得有趣。
+&lt;em&gt;Hugo&lt;/em&gt;是一个通用的网站框架。从技术角度来说，&lt;em&gt;Hugo&lt;/em&gt;是一个静态网站生成器。与每个访问者请求动态构建页面的系统不同，&lt;em&gt;Hugo&lt;/em&gt;在创建或更新内容时构建页面。由于网站被查看的频率远远多于编辑的频率，&lt;em&gt;Hugo&lt;/em&gt;旨在为您的网站最终用户提供最佳的查看体验，并为网站作者提供理想的编写体验。&lt;/p&gt;</description></item></channel></rss>
